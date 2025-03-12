@@ -9,7 +9,7 @@
 <dependency>
   <groupId>io.github.nlbwqmz</groupId>
   <artifactId>wj-auth-spring-boot-3-starter</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 

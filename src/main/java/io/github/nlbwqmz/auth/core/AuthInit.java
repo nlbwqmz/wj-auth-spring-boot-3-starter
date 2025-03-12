@@ -27,8 +27,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.condition.PathPatternsRequestCondition;
@@ -40,8 +39,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  * @author 魏杰
  * @since 0.0.1
  */
-@ServletComponentScan("io.github.nlbwqmz.auth")
-@ComponentScan("io.github.nlbwqmz.auth")
+@Component
 public class AuthInit implements ApplicationRunner {
 
   private final RequestMappingHandlerMapping mapping;

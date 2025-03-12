@@ -9,7 +9,7 @@
   </parent>
   <groupId>io.github.nlbwqmz</groupId>
   <artifactId>wj-auth-spring-boot-3-starter</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>认证授权框架，额外支持CORS、XSS、限流。(spring-boot 3.x)</description>
   <url>https://github.com/nlbwqmz/wj-auth-spring-boot-3-starter</url>
