@@ -1,6 +1,6 @@
-# wj-auth-spring-boot-starter
+# wj-auth-spring-boot-3-starter
 
-基于springboot的认证授权框架，额外支持CORS、XSS、限流。
+基于`springboot3`的认证授权框架，额外支持CORS、XSS、限流。
 
 ## 一、使用
 
@@ -247,19 +247,13 @@ public interface RateLimiterCondition {
 String subject = "userId";
 
 // 签发永不过期的token
-AuthManager.
-
-login(subject);
+AuthManager.login(subject);
 
 // 签发60分钟的token
-AuthManager.
-
-login(subject, 60*60*1000);
+AuthManager.login(subject, 60*60*1000);
 
 // 签发60分钟的token
-AuthManager.
-
-login(subject, 60,TimeUnit.MINUTES);
+AuthManager.login(subject, 60,TimeUnit.MINUTES);
 ```
 
 - 获取用户信息
