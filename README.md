@@ -8,8 +8,8 @@
 
 <dependency>
   <groupId>io.github.nlbwqmz</groupId>
-  <artifactId>wj-auth-spring-boot-starter</artifactId>
-  <version>0.0.4</version>
+  <artifactId>wj-auth-spring-boot-3-starter</artifactId>
+  <version>0.0.1</version>
 </dependency>
 ```
 
