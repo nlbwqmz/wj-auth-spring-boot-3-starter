@@ -48,7 +48,7 @@ public class AuthManager {
     Assert.notBlank(subject, () -> new TokenCreateException("The subject cannot be blank."));
     HttpServletResponse response = AuthThreadLocal.getResponse();
     response.setHeader(security.getHeader(), authTokenGenerate.create(subject, expire));
-    response.setHeader(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, security.getHeader());
+    response.addHeader(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, security.getHeader());
   }
 
   /**

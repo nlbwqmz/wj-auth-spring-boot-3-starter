@@ -9,7 +9,7 @@
   </parent>
   <groupId>io.github.nlbwqmz</groupId>
   <artifactId>wj-auth-spring-boot-3-starter</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>认证授权框架，额外支持CORS、XSS、限流。(spring-boot 3.x)</description>
   <url>https://github.com/nlbwqmz/wj-auth-spring-boot-3-starter</url>
@@ -131,7 +131,7 @@
         <artifactId>maven-gpg-plugin</artifactId>
         <version>3.2.7</version>
         <configuration>
-          <executable>D:\install\GnuPG\bin\gpg.exe</executable>
+          <executable>C:\Program Files (x86)\GnuPG\bin\gpg.exe</executable>
           <keyname>203E948F3CB70FFAB033349601800E747B817DB0</keyname>
         </configuration>
         <executions>

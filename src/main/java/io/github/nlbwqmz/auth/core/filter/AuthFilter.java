@@ -5,6 +5,7 @@ import io.github.nlbwqmz.auth.common.AuthThreadLocal;
 import io.github.nlbwqmz.auth.configuration.AuthRealm;
 import io.github.nlbwqmz.auth.core.chain.AuthChain;
 import io.github.nlbwqmz.auth.core.chain.ChainManager;
+import io.github.nlbwqmz.auth.core.chain.CorsAuthChain;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -32,6 +33,7 @@ public class AuthFilter implements Filter {
 
   private final List<AuthChain> authChains;
   private final AuthRealm authRealm;
+  private final CorsAuthChain corsAuthChain;
 
 
   @Override
@@ -42,6 +44,7 @@ public class AuthFilter implements Filter {
       return;
     }
     if (StrUtil.equalsIgnoreCase(HttpMethod.OPTIONS.name(), httpServletRequest.getMethod())) {
+      corsAuthChain.doCors((HttpServletResponse) response);
       chain.doFilter(request, response);
       return;
     }

@@ -26,29 +26,32 @@ public class CorsAuthChain implements AuthChain {
 
   @Override
   public void doFilter(ChainManager chain) {
+    doCors(AuthThreadLocal.getResponse());
+    chain.doAuth();
+  }
+
+  public void doCors(HttpServletResponse response){
     if (BooleanUtil.isTrue(corsConfiguration.isEnabled())) {
-      HttpServletResponse response = AuthThreadLocal.getResponse();
       response.setHeader(
-          HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS,
-          corsConfiguration.getAccessControlAllowCredentials().toString()
+              HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS,
+              corsConfiguration.getAccessControlAllowCredentials().toString()
       );
       response.setHeader(
-          HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS,
-          ArrayUtil.join(corsConfiguration.getAccessControlAllowHeaders(), ",")
+              HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS,
+              ArrayUtil.join(corsConfiguration.getAccessControlAllowHeaders(), ",")
       );
       response.setHeader(
-          HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS,
-          ArrayUtil.join(corsConfiguration.getAccessControlAllowMethods(), ",")
+              HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS,
+              ArrayUtil.join(corsConfiguration.getAccessControlAllowMethods(), ",")
       );
       response.setHeader(
-          HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,
-          ArrayUtil.join(corsConfiguration.getAccessControlAllowOrigin(), ",")
+              HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,
+              ArrayUtil.join(corsConfiguration.getAccessControlAllowOrigin(), ",")
       );
       response.setHeader(
-          HttpHeaders.ACCESS_CONTROL_MAX_AGE,
-          corsConfiguration.getAccessControlMaxAge().toString()
+              HttpHeaders.ACCESS_CONTROL_MAX_AGE,
+              corsConfiguration.getAccessControlMaxAge().toString()
       );
     }
-    chain.doAuth();
   }
 }
