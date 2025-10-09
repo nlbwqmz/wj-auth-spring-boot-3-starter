@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-dependencies</artifactId>
-    <version>3.4.3</version>
+    <version>3.5.6</version>
   </parent>
   <groupId>io.github.nlbwqmz</groupId>
   <artifactId>wj-auth-spring-boot-3-starter</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>认证授权框架，额外支持CORS、XSS、限流。(spring-boot 3.x)</description>
   <url>https://github.com/nlbwqmz/wj-auth-spring-boot-3-starter</url>
@@ -66,13 +66,13 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>33.3.1-jre</version>
+      <version>33.5.0-jre</version>
     </dependency>
 
     <dependency>
       <groupId>cn.hutool</groupId>
       <artifactId>hutool-all</artifactId>
-      <version>5.8.33</version>
+      <version>5.8.40</version>
     </dependency>
   </dependencies>
 

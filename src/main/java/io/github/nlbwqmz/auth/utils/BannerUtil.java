@@ -1,5 +1,8 @@
 package io.github.nlbwqmz.auth.utils;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class BannerUtil {
 
   private final static String BANNER =
@@ -9,11 +12,11 @@ public class BannerUtil {
           + "| |/\\| |   | |______|  _  | | | | | | |  _  |\n"
           + "\\  /\\  /\\__/ /      | | | | |_| | | | | | | |\n"
           + " \\/  \\/\\____/       \\_| |_/\\___/  \\_/ \\_| |_/\n"
-          + "v0.0.2";
+          + "v0.0.4";
 
 
   public static void printBanner() {
-    System.out.println(BANNER);
+    log.info(BANNER);
   }
 
 }
